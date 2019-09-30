@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Jones Tshoit",
+        "desc": "Linen tshirt",
+        "price": "21000",
+        "image": "assets/tshirt.jpg"
+    },
+    {
+        "name": "Nike shoes",
+        "desc": "airmax 2017",
+        "price": "21000",
+        "image": "assets/alpha.jpg"
+    },
+    {
+        "name": "Custom Nike shoes",
+        "desc": "2019 model",
+        "price": "21230",
+        "image": "assets/customNike.jpg"
+    },
+    {
+        "name": "Women kurti",
+        "desc": "Ladies kurti",
+        "price": "2100",
+        "image": "assets/kur.jpg"
+       
+    },
+    {
+        "name": "Dress",
+        "desc": "ladies designer dress",
+        "price": "2500",
+        "image": "assets/dress.jpg",
+        "dept":"footwear"
+    }
+]

@@ -1,0 +1,46 @@
+<div class="container text-center mt-5 pb-4" style="box-shadow: 2px 2px 8px 10px grey">
+   <div class="container pb-2" style="padding-top:15px; border-bottom: 2px solid grey ">
+    <h3 style="text-align: left; font-style: italic">Hey, Glad you made your way to this side!</h3>
+    <h4 style="font-style: italic">We welcome you to our family.</h4>
+    <h5 style="text-align: right; font-style: italic">You're few steps away from joining us, Hurry Up!</h5>
+</div>
+    <div class="container mt-3" style="text-align: left">
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" class="form-control" name="" id="name" placeholder="We'd like to know your full name." required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" placeholder="An email to keep you updated, Always!" required>
+            </div>
+            <div class="form-group">
+                <label for="pass">Password: </label>
+                <input type="password" id="pass"class="form-control" placeholder="Make it as strong as you can :')" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="phone">Contact: </label>
+                <input type="text" id="phone" class="form-control" placeholder="Just in case delievery boy needed to call" required>
+            </div>
+            <label for="">Gender:</label>
+            <br>
+            <div class="form-check-inline">
+                    <label class="form-check-label" for="radio1">
+                      <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Male
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label" for="radio2">
+                      <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Female
+                    </label>
+                  </div>
+                  <div class="form-check-inline mb-2">
+                        <label class="form-check-label" for="radio3">
+                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option2">Other
+                              </label>
+            </div>
+            <button type="button" class="btn btn-outline-warning btn-block" (click)="alertUser()">Submit</button>
+        </form>
+    </div>
+</div>

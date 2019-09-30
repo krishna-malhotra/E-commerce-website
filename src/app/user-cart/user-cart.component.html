@@ -1,1 +1,101 @@
-<p>user-cart works!</p>
+<div class="container mt-5 bg-light">
+    <h1 style="font-size: 45px;">Your Cart Items: {{cartItemNum}}</h1>
+</div>
+<!--outer container for all items in cart-->
+<div class="container-fluid d-flex mt-5 mb-5" >
+<div class="container-fluid" style="width: 70%;  ">
+<div class="container mt-3 "  *ngFor="let prod of list">
+    <!--Cart items and details-->
+ 
+    <div class="container-fluid d-flex pb-2" style="border-bottom: 1px solid orange" >
+        <img src="{{prod.image}}" alt="shoes" class="thumbnail" width="20%" height="20%">
+        <!--details-->
+        <div class="container-fluid itemDetails">
+            <!--brand name/ detail-->
+            <h5>{{prod.name}}</h5>
+        
+            <!--price-->
+            <h5>Price: Rs. {{prod.price}}</h5>
+         
+            <!--availability-->
+            <h5 style="color: green">In Stock</h5>
+            
+        </div>
+        <!--quantity inc/dec-->
+        <div class="container-fluid incDec">
+            <button class="btn btn-outline-warning" (click)="decQ()" style="width: 40px; height: 40px; margin-right: 15px"  >-</button>
+            <h4> {{quantityOfItem}} </h4>
+            <button class="btn btn-outline-warning" style="width: 40px; height: 40px; margin-left: 15px">+</button>
+        </div>
+        <!--delete item from the cart-->
+        <div class="container-fluid delete" >
+            <button class="btn btn-outline-danger">Delete</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container" style="width: 30%;">
+    <h3 class="text-center">Total Value Of Cart</h3>
+    <div class="container d-flex">
+        <div class="container" id="total amt"><h5>Total Price:</h5></div>
+        <div class="container">
+                <h5 style="color: orange">17000</h5>
+        </div>
+    </div>
+    <div class="container d-flex">
+            <div class="container" id="tax"><h5>Tax:</h5></div>
+            <div class="container">
+                    <h5 style="color: orange">+170</h5>
+            </div>
+        </div>
+        <hr>
+        <div class="container d-flex">
+                <div class="container" id="total"><h5>Total Amount:</h5></div>
+                <div class="container">
+                        <h5 style="color: orange">17770</h5>
+                </div>
+            </div>
+</div>
+
+</div>
+<!--checkout-->
+<div class="container-fluid">
+    
+    <div class="form-group container-fluid">
+        <label for="address">Select billing address</label>
+        <select  id="address" class="form-control">
+            <option>14A model town</option>
+            <option>16A dilbagh nagar</option>
+        </select>
+    </div>
+</div>
+<div class="container-fluid d-flex mt-5">
+<div class="container-fluid">
+    <form action="#">
+        <h3>OR Choose A New Billing Address</h3>
+    <div class="form-group">
+        <label for="name">Full Name: </label>
+        <input type="text" class="form-control"id="name" placeholder="Enter Owner Name">
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" class="form-control" placeholder="Enter Contact Number">
+    </div>
+    <div class="form-group">
+        <label for="city">City: </label>
+        <input type="text" id="city" placeholder="Enter City" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="state">State: </label>
+        <input type="text" id="state" placeholder="Enter State" class="form-control">  
+    </div>
+    <button class="btn btn-outline-primary btn-block">Save Address</button>
+    </form>
+</div>
+    <div class="container-fluid text-center checkout">
+        <h3>Done with Shopping? <br> CHECKOUT AND PLACE ORDER!</h3>
+        <button class="btn  btn-outline-dark"> Place Order</button>
+        <h3>OR</h3>
+        <a href="" routerLink="/home">Continue Shopping?</a>
+    </div>
+</div>

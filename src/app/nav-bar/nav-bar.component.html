@@ -1,1 +1,41 @@
-<p>nav-bar works!</p>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark navss">
+  <a href="#" routerLink='/home' class="navbar-brand">ShopAll.com</a>
+ 
+ 
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a href="#" routerLink='/login' class="nav-link">Account</a>
+    </li>
+    <li class="nav-item">
+      <a href="#"  routerLink='/cart' class="nav-link">Cart</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" routerLink='/orderHistory' class="nav-link">Order History</a>
+    </li>
+  </ul>
+  <form class="form-inline" action="#">
+    <input class="form-control ml-5 mr-1" type="text" placeholder="Search for products">
+    <button class="btn btn-warning" type="submit">Search</button>
+  </form>
+</nav>
+<div class="container-fluid categ">
+  <nav class="navbar navbar-expand navbar-light bg-light justify-content-center navs">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a href="" routerLink="/prodList" class="nav-link">All Products</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" routerLink="/prodList" class="nav-link">Clothing</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" routerLink="/prodList" class="nav-link">Books</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" routerLink="/prodList" class="nav-link">Electronics</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" routerLink="/prodList" class="nav-link">Footwear</a>
+      </li>
+    </ul>
+  </nav>
+</div>

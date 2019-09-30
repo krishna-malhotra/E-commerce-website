@@ -1,0 +1,26 @@
+*{
+    font-family: 'Saira Stencil One', cursive;
+}
+.itemDetails{
+    display: flex;
+    color:orange;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.incDec{    
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+}
+.delete{
+    display: flex;
+    align-items: center;
+}
+.checkout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #E0A800;
+}
