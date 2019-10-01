@@ -30,12 +30,7 @@ export const MAIN_ROUTES: Routes = [
         component: CreateUserComponent
       },
       {
-        path: "prodList",
+        path : "prodList/:category",
         component: ProductListComponent
-
-      },
-      {
-        path: "prodLis/:id",
-        component: ProductDetailsComponent
       }
 ]

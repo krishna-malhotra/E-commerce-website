@@ -10,4 +10,9 @@ export class ProdServiceService {
   {
     return this.http.get('http://localhost:2019/allProducts');
   }
+  getProductsByCategory(cat)
+  {
+    
+    return this.http.get('http://localhost:2019/allProducts/'+cat);
+  }
 }
