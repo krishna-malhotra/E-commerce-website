@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit {
   private products;
   private url;
   private categ;
-  constructor(private _http: ProdServiceService, private route : ActivatedRoute) { }
+  constructor(private _http: ProdServiceService, private route : ActivatedRoute, private router: Router) { }
   
   ngOnInit() {
    this.route.paramMap.subscribe( (params: ParamMap) => {
@@ -39,5 +39,24 @@ export class ProductListComponent implements OnInit {
       alert(error);
     }))
   }
-
+  viewProd(product)
+  {
+    this.router.navigate(['product-detail',product.productId]);
+  }
+  findByPriceAndCateg(min,max)
+  {
+    if(this.categ==='all')
+    {
+      this._http.getByPrice(min,max).subscribe(data => {
+        this.products = data;
+      })
+    }
+    else{
+    this._http.getProductByCategAndPrice(this.categ,min,max).subscribe(data => {
+      this.products = data;
+    },(error => {
+      console.log("find by price and cateh has error "+ error);
+    }));
+  }
+  }
 }

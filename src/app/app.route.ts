@@ -32,5 +32,9 @@ export const MAIN_ROUTES: Routes = [
       {
         path : "prodList/:category",
         component: ProductListComponent
+      },
+      {
+        path: "product-detail/:id",
+        component: ProductDetailsComponent
       }
 ]

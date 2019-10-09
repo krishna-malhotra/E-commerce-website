@@ -6,38 +6,38 @@
             <h6 class=" text-center mt-3">CATEGORIES</h6>
               <ul class="text-center mr-5 txtColr" style="list-style-type: none">
                 <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('clothing')" routerLink='prodList/clothing'>Clothing</button></li>
-                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('footwear')" routerLink='prodList/clothing'>Footwear</button></li>
-                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('electronics')" routerLink='prodList/clothing'>Electronics</button></li>
-                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('books')" routerLink='prodList/clothing'>Books</button></li>
+                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('footwear')" routerLink='prodList/footwear'>Footwear</button></li>
+                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('electronics')" routerLink='prodList/electronics'>Electronics</button></li>
+                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('books')" routerLink='prodList/books'>Books</button></li>
               </ul>
             </div>
         <div class="mx-3" style="border-bottom:1px solid #b6a9c2 "></div>
         <h6 class=" text-center mt-3">PRICE</h6>
-        <form class="text-center mt-3 txtColr">
-          <div class="checkbox">
-            <label ><input type="checkbox" class="mr-1">Below 1000</label>
+        <form class="text-center mt-3">
+          <div class="form-check ml-2">
+            <label ><input type="radio"class="form-check-input" name="val1" (change)="findByPriceAndCateg(0,500)">Below 500</label>
           </div>
-          <div class="checkbox">
-            <label><input type="checkbox" class="mr-1" value="">1000 to 5000</label>
+          <div class="form-check  ml-2">
+            <label><input type="radio"class="form-check-input" value="" name="val1" min="501" max="1000" (change)="findByPriceAndCateg(501,1000)">501 to 1000</label>
           </div>
-          <div class="checkbox disabled">
-            <label><input type="checkbox" class="mr-1" value="" >5000 to 10000</label>
+          <div class="form-check  ml-2">
+            <label><input type="radio"class="form-check-input" value="" name="val1" min="1001" max="2000" (change)="findByPriceAndCateg(1001,2000)">1001 to 2000</label>
           </div>
-          <div class="checkbox disabled">
-            <label><input type="checkbox" class="mr-1" value="" >10000 and above</label>
+          <div class="form-check ml-2">
+            <label><input type="radio"class="form-check-input" value="" name="val1" min="2001" max="100000" (change)="findByPriceAndCateg(2001,100000)">2001 and above</label>
           </div>
         </form>
       </div>
 
 <div class="container d-flex flex-wrap" style="width:100%">
-       <div class="card mx-2 mb-2"style="width:350px; height:550px" *ngFor="let prod of products">
+       <div class="card mx-2 mb-3 p-2"style="width:350px; height:550px; box-shadow:1px 1px 1px 3px grey;" *ngFor="let prod of products">
         <img class="card-img-top " src="{{prod.image}}" alt="Card image" style="width:100%; height: 60%;">
         <div class="card-body">
           <h4 class="card-title " style="color: orange; font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">{{prod.name}}</h4>
           <p class="card-text" style="font-weight:bolder; color:#343A40">{{prod.desc}}<p>
           <p class="card-text" style="font-weight:bolder; ">RS. {{prod.price}}</p>
           <div class="container d-flex mt-5">
-              <a href="" class="btn btn-outline-warning mr-5 ">Buy Now</a>
+              <button class="btn btn-outline-warning mr-5 " (click)="viewProd(prod)">Buy Now</button>
               <a href="" class="btn btn-outline-warning">Add To Cart</a>
           </div>
         </div>
