@@ -12,6 +12,7 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {FormsModule} from '@angular/forms';
     ProductListComponent,
     UserCartComponent,
     LoginSignupComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    LogoutComponent
   
   ],
   imports: [

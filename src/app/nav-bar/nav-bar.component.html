@@ -3,8 +3,11 @@
  
  
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <a href="#" routerLink='/login' class="nav-link">Account</a>
+    <li class="nav-item" *ngIf="!loginService.isUserLoggedIn()">
+      <a href="#"  routerLink='/login' class="nav-link">Account</a>
+    </li>
+    <li class="nav-item" *ngIf="loginService.isUserLoggedIn()">
+      <a href="/logout" class="nav-link" >Log Out</a>
     </li>
     <li class="nav-item">
       <a href="#"  routerLink='/cart' class="nav-link">Cart</a>

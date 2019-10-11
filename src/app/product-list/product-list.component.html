@@ -38,7 +38,7 @@
           <p class="card-text" style="font-weight:bolder; ">RS. {{prod.price}}</p>
           <div class="container d-flex mt-5">
               <button class="btn btn-outline-warning mr-5 " (click)="viewProd(prod)">Buy Now</button>
-              <a href="" class="btn btn-outline-warning">Add To Cart</a>
+              <button class="btn btn-outline-warning" (click)="addProd(prod.productId)">Add To Cart</button>
           </div>
         </div>
       </div>

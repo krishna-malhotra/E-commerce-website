@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProdServiceService} from '../prod-service.service'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,7 @@ export class ProductListComponent implements OnInit {
   private products;
   private url;
   private categ;
-  constructor(private _http: ProdServiceService, private route : ActivatedRoute, private router: Router) { }
+  constructor(private _http: ProdServiceService, private route : ActivatedRoute, private router: Router,private cartS: CartService) { }
   
   ngOnInit() {
    this.route.paramMap.subscribe( (params: ParamMap) => {
@@ -58,5 +59,10 @@ export class ProductListComponent implements OnInit {
       console.log("find by price and cateh has error "+ error);
     }));
   }
+  }
+  addProd(prodId)
+  {
+    this.cartS.addProduct(prodId).subscribe((data) => console.log(data));
+    alert("Product has been added to your cart");
   }
 }

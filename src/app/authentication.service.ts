@@ -12,7 +12,10 @@ export class AuthenticationService {
    const headers = new HttpHeaders({Authorization : 'Basic ' + btoa(username+':'+password)});
    return this.http.get('http://localhost:2019/loginUser', {headers}).pipe(
      map(data=>{
-       sessionStorage.setItem('token',btoa(username+':'+password));
+       sessionStorage.setItem('username',username);
+       const authString = 'Basic ' + btoa(username+":"+password);
+       sessionStorage.setItem('basicAuth',authString);
+       console.log(data);
        return data;
      }
      ));
@@ -21,7 +24,6 @@ export class AuthenticationService {
  isUserLoggedIn()
  {
    const user = sessionStorage.getItem('username');
-   console.log(!(user===null));
    return !(user===null);
  }
  logOut()
