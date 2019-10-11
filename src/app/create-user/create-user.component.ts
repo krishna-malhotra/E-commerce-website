@@ -28,7 +28,6 @@ export class CreateUserComponent implements OnInit {
   }
   alertUser()
   {
-    alert(this.user.mobile);
    this.register.addUsers(this.user).subscribe(data=>{
      alert("Registered!");
     this.router.navigate['login'];
