@@ -39,5 +39,9 @@ export class CartService {
     const headers = new HttpHeaders({Authorization: sessionStorage.getItem('basicAuth')});
     return this.http.get('http://localhost:2019/addToCart/'+prodId,{headers});
   }
+  checkOut(){
+    const headers = new HttpHeaders({Authorization: sessionStorage.getItem('basicAuth')});
+    return this.http.get('http://localhost:2019/checkOut',{headers});
+  }
 
 }

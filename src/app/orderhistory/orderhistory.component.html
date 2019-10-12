@@ -1,0 +1,25 @@
+<div class="container-fluid mt-5 ">
+    <div class="container bg-light">
+        <h3 style="font-size:50px; font-weight: bolder;" class="p-3">Keep Shopping..!!</h3>
+    </div>
+    <div class="container-fluid">
+    <table class="table  table-hover table-hover mt-5 table-xl ">
+        <thead>
+          <tr>
+            <th style="color: orange; font-size:20px;">Product Name</th>
+            <th style="color: orange; font-size:20px;">Product Quantity</th>
+            <th style="color: orange; font-size:20px;">Product Price</th>
+            <th style="color: orange; font-size:20px;">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list" style="font-size: 20px; padding:10px;">
+            <td style="font-weight: bolder; font-size:20px">{{item.itemName}}</td>
+            <td>{{item.quantity}}</td>
+            <td style="color: red">Rs. {{item.price}}</td>
+            <td>{{item.date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

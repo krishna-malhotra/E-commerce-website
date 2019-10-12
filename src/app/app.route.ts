@@ -6,6 +6,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { LogoutComponent } from './logout/logout.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 
 
 export const MAIN_ROUTES: Routes = [
@@ -41,6 +42,10 @@ export const MAIN_ROUTES: Routes = [
       {
         path:"logout",
         component:LogoutComponent
+      },
+      {
+        path:"checkOut",
+        component:OrderhistoryComponent
       }
 
 ]

@@ -9,11 +9,11 @@
     <li class="nav-item" *ngIf="loginService.isUserLoggedIn()">
       <a href="/logout" class="nav-link" >Log Out</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item"  *ngIf="loginService.isUserLoggedIn()">
       <a href="#"  routerLink='/cart' class="nav-link">Cart</a>
     </li>
-    <li class="nav-item">
-      <a href="#" routerLink='/orderHistory' class="nav-link">Order History</a>
+    <li class="nav-item"  *ngIf="loginService.isUserLoggedIn()">
+      <a href="/checkOut" class="nav-link">Order History</a>
     </li>
   </ul>
   <form class="form-inline" action="#">

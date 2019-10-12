@@ -13,6 +13,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LogoutComponent } from './logout/logout.component';
     UserCartComponent,
     LoginSignupComponent,
     CreateUserComponent,
-    LogoutComponent
+    LogoutComponent,
+    OrderhistoryComponent
   
   ],
   imports: [

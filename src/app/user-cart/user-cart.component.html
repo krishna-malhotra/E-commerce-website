@@ -7,7 +7,7 @@
 <div class="container mt-3 "  *ngFor="let prod of list">
     <!--Cart items and details-->
  
-    <div class="container-fluid d-flex pb-2" style="border-bottom: 1px solid orange" >
+    <div class="container-fluid d-flex pb-2" style="border-bottom: 1px solid orange;" >
         <img src="{{prod.products.image}}" alt="shoes" class="thumbnail" width="20%" height="20%">
         <!--details-->
         <div class="container-fluid itemDetails">
@@ -49,12 +49,13 @@
             </div>
         </div>
         <hr>
-        <div class="container d-flex">
+        <div class="container d-flex ">
                 <div class="container" id="total"><h5>Total Amount:</h5></div>
                 <div class="container">
-                        <h5 style="color: orange">Rs. {{total + 170}}</h5>
+                        <h5 style="color: orange">Rs. {{total}}</h5>
                 </div>
             </div>
+            <button class="btn btn-outline-warning btn-block" (click)="checkOut()">Check Out</button>
 </div>
 
 </div>
@@ -94,7 +95,7 @@
 </div>
     <div class="container-fluid text-center checkout">
         <h3>Done with Shopping? <br> CHECKOUT AND PLACE ORDER!</h3>
-        <button class="btn  btn-outline-dark"> Place Order</button>
+        <button class="btn  btn-outline-dark" (click)="checkOut()"> Place Order</button>
         <h3>OR</h3>
         <a href="" routerLink="/home">Continue Shopping?</a>
     </div>
