@@ -9,6 +9,7 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./create-user.component.scss']
 })
 
+
 export class CreateUserComponent implements OnInit {
  
   private user: userTypes  = new class implements userTypes{
@@ -20,6 +21,7 @@ export class CreateUserComponent implements OnInit {
         user_id:number;
      active:boolean;
      role:string;
+     Address:string;
   }
   
   constructor(private register: RegisterService, private router: Router ){ }
@@ -30,7 +32,7 @@ export class CreateUserComponent implements OnInit {
   {
    this.register.addUsers(this.user).subscribe(data=>{
      alert("Registered!");
-    this.router.navigate['login'];
+    this.router.navigate(['/login']);
    })
   }
 }

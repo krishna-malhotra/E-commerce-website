@@ -1,0 +1,65 @@
+<div class="container mt-5 bg-light p-5">
+        <div class="row">
+            <div class="col-sm-7">
+                <img src="{{product.image}}" alt="" width="500px" height="500px">
+                <h5  style="font-size:10px"class="text-muted  mt-2">Product view</h5>
+            </div>
+            <div class="col-sm-5">
+                <h3 style="color: orange; font-weight:bolder; font-size:45px; text-transform:uppercase; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{product.name}}</h3>
+                <hr>
+                <div class="container">
+                        <form action="" class="was-validated">
+                            <div class="form-group">
+                              <label for="email">Product Name:</label>
+                              <input type="text" class="form-control" id="nail" placeholder="{{product.name}}" name="name" [ngModel]="product.name" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Product Price:</label>
+                              <input type="text" class="form-control" id="pri" placeholder="{{product.price}}" name="price" [(ngModel)]="product.price" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                    <label for="pwd">Product Description:</label>
+                                    <input type="text" class="form-control" id="desc" placeholder="{{product.details}}" name="Descc"required [(ngModel)]="product.details">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="s">Product Category: </label>
+                                        <select class="custom-select" [(ngModel)]="product.category" name="Select"  id="s" required>
+                                          <option>Clothing</option>
+                                          <option>Footwear</option>
+                                          <option >Electronic</option>
+                                          <option>Books</option>
+                                        </select>
+                                      </div>
+                            <button type="submit" class="btn btn-outline-danger btn-block" (click)="editPr()" data-toggle="modal" data-target="#myModal">Submit</button>
+                                
+                                  <!-- The Modal -->
+                                  <div class="modal fade" id="myModal">
+                                    <div class="modal-dialog bg-dark">
+                                      <div class="modal-content bg-dark">
+                                      
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                          <h4 class="modal-title text-success">Success!</h4>
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                          <h3 class="text-warning">Details has been updated!</h3>
+                                        </div>
+                                        
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                    
+                                
+                          </form>
+                </div>
+    </div>

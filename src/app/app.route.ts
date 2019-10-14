@@ -7,6 +7,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { LogoutComponent } from './logout/logout.component';
 import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { EditproductComponent } from './editproduct/editproduct.component';
 
 
 export const MAIN_ROUTES: Routes = [
@@ -46,6 +49,18 @@ export const MAIN_ROUTES: Routes = [
       {
         path:"checkOut",
         component:OrderhistoryComponent
+      },
+      {
+        path:"profile",
+        component:UserProfileComponent
+      },
+      {
+        path:"addProduct",
+        component:AddproductComponent
+      },
+      {
+        path:"editProductC/:id",
+        component:EditproductComponent
       }
 
 ]

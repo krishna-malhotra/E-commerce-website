@@ -7,4 +7,5 @@ export interface userTypes {
         user_id:number;
      active:boolean;
      role:string;
+     Address:string;
   }
