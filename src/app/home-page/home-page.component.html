@@ -1,3 +1,4 @@
+<app-nav-bar></app-nav-bar>
 <div class="container-fluid" >
     <div class="carousel slide" id="myCarousel" data-ride="carousel">
             <ul class="carousel-indicators">
@@ -13,7 +14,7 @@
                               <h3 style="font-weight: bolder; font-style: italic; color: coral; text-shadow: 2px -2px 10px red">"Your apparel appeals for you!"</h3>
                                 <h4 style="font-style: italic; color: white">Have a look at our wide range <br> of apparels</h4>
                                 <br>
-                                <button class="btn btn-dark" style="width: 50%" routerLink="/prodList">Buy Now!</button>
+                                <button class="btn btn-dark" style="width: 50%" routerLink="/prodList/Clothing">Buy Now!</button>
                           </div>
                       </div>
                       <div class="carousel-item">
@@ -22,7 +23,7 @@
                                 <h3 style="font-weight: bolder; font-size: 35px; font-style: italic; color: white; text-shadow: 2px -2px 20px red">“A room without books is like a body without a soul.”</h3>
                                 <h4 style="font-weight: bolder; font-size: 35px;font-style: italic; color:whitesmoke; font-weight: bolder" >Have a look at our wide range <br> of books</h4>
                                 <br>
-                                <button class="btn btn-warning" style="width: 50%" routerLink="/prodList">Buy Now!</button>
+                                <button class="btn btn-warning" style="width: 50%" routerLink="/prodList/books">Buy Now!</button>
                             </div>
                       </div>
                       <div class="carousel-item">
@@ -31,7 +32,7 @@
                           <h3 style="font-weight: bolder; font-size: 20px; font-style: italic; color: white; text-shadow: 2px -2px 10px orange">“Dreams about the future are always filled with gadgets.”</h3>
                                 <h4 style="font-weight: bolder; font-size: 20px;font-style: italic; color:whitesmoke; font-weight: bolder" >Have a look at our wide range <br> of gadgets at lowest price.</h4>
                                 <br>
-                                <button class="btn btn-dark" style="width: 50%" routerLink="/prodList">Buy Now!</button>
+                                <button class="btn btn-dark" style="width: 50%" routerLink="/prodList/electronics">Buy Now!</button>
                       </div>
                     </div>
                       <div class="carousel-item">
@@ -40,7 +41,7 @@
                                 <h3 style="font-weight: bolder; font-size: 35px; font-style: italic; color: #F27D3D; text-shadow: 2px -2px 8px black">“Good shoes take you to Good places.”</h3>
                                 <h4 style="font-weight: bolder; font-size: 35px;font-style: italic; color:white; font-weight: bolder" >Have a look at our trendiest range <br> of footwear</h4>
                                 <br>
-                                <button class="btn" style="width: 50%; background: #F27D3D" routerLink="/prodList">Buy Now!</button>
+                                <button class="btn" style="width: 50%; background: #F27D3D" routerLink="/prodList/footwear">Buy Now!</button>
                           </div>
                       </div>
                       
@@ -73,7 +74,7 @@
             
             <div class="container muted" style="position: absolute; top:55%; left:10%">
             <h3 style="font-weight: bolder; font-size:27px; color:white">Best Sellers</h3>
-            <button class="btn btn-dark"><a href="" routerLink='/bestSellers'>Shop Now </a></button>
+            <button class="btn btn-dark"><a href="" routerLink='/prodList/clothing'>Shop Now </a></button>
         
         </div>
         </div>
@@ -81,14 +82,14 @@
             <img src="assets/apparel.jpg" alt="" style="height: 250px; width: 100%;">
             <div class="container" style="position: absolute; top:57%; left:27%; color: white">
             <h3>Apparels</h3>
-            <button class="btn btn-dark"><a href="" routerLink='/clothing'>Shop Now </a></button>
+            <button class="btn btn-dark"><a href="" routerLink='/prodList/clothing'>Shop Now </a></button>
         </div>
     </div>
         <div class="col-sm-3">
             <img src="assets/gear.jpg" alt="" style="height: 250px; width: 100%;">
             <div class="container" style="position: absolute; top:57%; left:10%; color: white">
             <h3>Gears</h3>
-            <button class="btn btn-dark"><a href="" routerLink='/electronics'>Shop Now </a></button>
+            <button class="btn btn-dark"><a href="" routerLink='/prodList/electronics'>Shop Now </a></button>
         </div>
     </div>
     </div>    
@@ -106,7 +107,7 @@
         <div class="container">
             <h3 style="font-weight: bolder; color: coral" >LINEN SHIRTS</h3>
             <h4 style="color: lightgray">Leads to lesser <br>complaints <br> of heat.</h4>
-            <a href="" style="color: lightgray" routerLink='/prodList'>+ Explore More</a>
+            <a href="" style="color: lightgray" routerLink='/prodList/clothing'>+ Explore More</a>
         </div>
         </div>
     </div>
@@ -115,7 +116,7 @@
                 <div class="container text">
                         <h3 style="font-weight: bolder; color: coral">POOL SLIDERS</h3>
                         <h4 style="color: lightgray; ">Leads to lesser <br>complaints <br> of heat.</h4>
-                        <a href="" style="color: lightgray" routerLink='/prodList'>+ Explore More</a>
+                        <a href="" style="color: lightgray" routerLink='/prodList/footwear'>+ Explore More</a>
                     </div>
                     <div class="container">
                             <img src="assets/slippers.jpg" alt="shirt">
@@ -136,7 +137,7 @@
                         <div class="container">
                         <h3 style="font-weight: bolder; color:coral">Kurta-Plazzo set: Mix 'N' <br>
                         Match Isn't Your Probles</h3>
-                        <a href="" style="color: lightgray" routerLink='/prodList'>+ Explore More</a>
+                        <a href="" style="color: lightgray" routerLink='/prodList/clothing'>+ Explore More</a>
                     </div>
                 </div>
            </div>
@@ -192,7 +193,7 @@
 
             <div class="col-sm-3">
                     <img src="assets/jordan.jpg" alt=""  style="width: 100%;opacity: 0.1;">
-                   <button class="btn btn-outline-warning btn-block mt-3" routerLink='/prodList'>Click To View More</button>
+                   <button class="btn btn-outline-warning btn-block mt-3" routerLink='/prodList/footwear'>Click To View More</button>
             </div>
     </div>
 </div>
@@ -219,7 +220,7 @@
     
                 <div class="col-sm-3">
                         <img src="assets/book4.jpg" alt=""  style="width: 80%; height:70%   ;opacity: 0.1;">
-                       <button class="btn btn-outline-warning btn-block mt-3" routerLink='/prodList'>Click To View More</button>
+                       <button class="btn btn-outline-warning btn-block mt-3" routerLink='/prodList/books'>Click To View More</button>
                 </div>
         </div>
     </div>
@@ -246,7 +247,7 @@
         
                     <div class="col-sm-3">
                             <img src="assets/shirt4.jpg" alt=""  style="opacity: 0.1;">
-                           <button class="btn btn-outline-warning btn-block mt-3" routerLink='/prodList'>Click To View More</button>
+                           <button class="btn btn-outline-warning btn-block mt-3" routerLink='/prodList/clothing'>Click To View More</button>
                     </div>
             </div>
         </div>

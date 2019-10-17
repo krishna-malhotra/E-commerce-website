@@ -37,4 +37,8 @@ export class ProdServiceService {
     const headers = new HttpHeaders({Authorization:sessionStorage.getItem('basicAuth')});
     return this.http.post('http://localhost:2019/editProducts',prod,{headers}); 
   }
+  getSearched(searched)
+  {
+    return this.http.get('http://localhost:2019/search/'+searched);
+  }
 }

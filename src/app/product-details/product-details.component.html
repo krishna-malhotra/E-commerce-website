@@ -1,3 +1,4 @@
+<app-nav-bar></app-nav-bar>
 <div class="container mt-5 bg-light p-5">
     <div class="row">
         <div class="col-sm-7">
@@ -10,11 +11,7 @@
             <h4 style="font-style: italic; color: tan; font-weight: bold; font-size:30px; padding-bottom:7px ">Description:</h4>
             <h4 class="pb-2" style="font-weight:bold; font-style:italic; font-size:25px">{{product.details}}</h4>
             <h5 class="text-muted pb-3 " style="font-size: 20px">Price:- Rs. {{product.price}}</h5>
-            <div class="container-fluid incDec pb-3">
-                    <button class="btn btn-outline-warning"  style="width: 40px; height: 40px; margin-right: 15px"  >-</button>
-                    <h4> {{quant}} </h4>
-                    <button class="btn btn-outline-warning" style="width: 40px; height: 40px; margin-left: 15px">+</button>
-                </div>
+         
                 <button class="btn btn-outline-warning btn-block" (click)="addToC(product.productId)">Add To Cart</button>
         </div>
     </div>

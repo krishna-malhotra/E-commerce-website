@@ -1,15 +1,20 @@
+<app-nav-bar (childEvent)="this.products=$event"></app-nav-bar>
 <div class="container-fluid bg-light d-flex mt-3">
 <div  class="container bg-white " style="width: 30%;">
         <h5 class="text-center">Filters</h5>
         <div class="mx-3" style="border-bottom:1px solid #b6a9c2 "></div>
             <div class="">
             <h6 class=" text-center mt-3">CATEGORIES</h6>
-              <ul class="text-center mr-5 txtColr" style="list-style-type: none">
-                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('clothing')" routerLink='prodList/clothing'>Clothing</button></li>
-                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('footwear')" routerLink='prodList/footwear'>Footwear</button></li>
-                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('electronics')" routerLink='prodList/electronics'>Electronics</button></li>
-                <li class="my-2"><button class="btn btn-outline-warning" (click)="getProdByCat('books')" routerLink='prodList/books'>Books</button></li>
-              </ul>
+             <div class="container text-center">
+               <button class="btn btn-outline-warning btn-block"  routerLink='/prodList/clothing'>Clothing</button>
+               <br>
+               <button class="btn btn-outline-warning btn-block"  routerLink='/prodList/footwear'>Footwear</button>
+               <br>
+               <button class="btn btn-outline-warning btn-block"  routerLink='/prodList/electronics'>Electronics</button>
+               <br>
+               <button class="btn btn-outline-warning btn-block"  routerLink='/prodList/books'>Books</button>
+               <br>
+              </div>
             </div>
         <div class="mx-3" style="border-bottom:1px solid #b6a9c2 "></div>
         <h6 class=" text-center mt-3">PRICE</h6>
@@ -40,7 +45,7 @@
               <button class="btn btn-outline-warning mr-5 " (click)="viewProd(prod)">Buy Now</button>
               <button class="btn btn-outline-warning" (click)="addProd(prod.productId)">Add To Cart</button>
           </div>
-          <button class="btn btn-outline-warning btn-block mt-1"  (click)="edit(prod)" *ngIf="user.role=='Admin'">Edit Product</button>
+          <button class="btn btn-outline-warning btn-block mt-1"  (click)="edit(prod)" *ngIf="role=='Admin' && loginService.isUserLoggedIn()">Edit Product</button>
         </div>
       </div>
 </div>

@@ -1,3 +1,4 @@
+<app-nav-bar></app-nav-bar>
 <div class="container mt-5 bg-light p-5">
         <div class="row">
             <div class="col-sm-7">
@@ -25,10 +26,10 @@
                                   <div class="form-group">
                                       <label for="s">Product Category: </label>
                                         <select class="custom-select" [(ngModel)]="product.category" name="Select"  id="s" required>
-                                          <option>Clothing</option>
-                                          <option>Footwear</option>
-                                          <option >Electronic</option>
-                                          <option>Books</option>
+                                          <option>clothing</option>
+                                          <option>footwear</option>
+                                          <option >electronic</option>
+                                          <option>books</option>
                                         </select>
                                       </div>
                             <button type="submit" class="btn btn-outline-danger btn-block" (click)="editPr()" data-toggle="modal" data-target="#myModal">Submit</button>

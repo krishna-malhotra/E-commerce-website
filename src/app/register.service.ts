@@ -22,4 +22,8 @@ export class RegisterService {
     const headers = new HttpHeaders({Authorization: sessionStorage.getItem('basicAuth')});
     return this.http.get('http://localhost:2019/getUser',{headers}); 
   }
+  logout(){
+    const headers = new HttpHeaders({Authorization:sessionStorage.getItem('basicAuth')});
+    return this.http.get('http://localhost:2019/logout',{headers});
+  }
 }

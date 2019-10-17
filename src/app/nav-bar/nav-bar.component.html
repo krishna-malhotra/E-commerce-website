@@ -4,10 +4,24 @@
  
   <ul class="navbar-nav mr-auto">
     <li class="nav-item" *ngIf="!loginService.isUserLoggedIn()">
-      <a href="#"  routerLink='/login' class="nav-link">Account</a>
+      <a href="#"  routerLink='/login' class="nav-link">Log In</a>
     </li>
-    <li class="nav-item" *ngIf="loginService.isUserLoggedIn()">
-      <a href="/logout" class="nav-link" >Log Out</a>
+    <li class="nav-item dropdown"  *ngIf="loginService.isUserLoggedIn()">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        My Account
+      </a>
+      <div class="dropdown-menu">
+        <li class="nav-item" *ngIf="loginService.isUserLoggedIn()">
+          <a href="/logout" class="nav-link" >Log Out</a>
+        </li>
+       
+        <li class="nav-item"  *ngIf="loginService.isUserLoggedIn()">
+            <a href="/profile" class="nav-link">My Profile</a>
+          </li>
+          <li class="nav-item"  *ngIf="loginService.isUserLoggedIn() && isAdmin=='Admin'">
+              <a href="/addProduct" class="nav-link">Add Product</a>
+            </li>
+      </div>
     </li>
     <li class="nav-item"  *ngIf="loginService.isUserLoggedIn()">
       <a href="#"  routerLink='/cart' class="nav-link">Cart</a>
@@ -15,16 +29,10 @@
     <li class="nav-item"  *ngIf="loginService.isUserLoggedIn()">
       <a href="/checkOut" class="nav-link">Order History</a>
     </li>
-    <li class="nav-item"  *ngIf="loginService.isUserLoggedIn()">
-        <a href="/profile" class="nav-link">My Profile</a>
-      </li>
-      <li class="nav-item"  *ngIf="loginService.isUserLoggedIn() && user.role==='Admin'">
-          <a href="/addProduct" class="nav-link">Add Product</a>
-        </li>
   </ul>
   <form class="form-inline" action="#">
-    <input class="form-control ml-5 mr-1" type="text" placeholder="Search for products">
-    <button class="btn btn-warning" type="submit">Search</button>
+    <input class="form-control ml-5 mr-1" type="text" placeholder="Search for products" [(ngModel)]="search" [ngModelOptions]="{standalone:true}">
+    <button class="btn btn-warning" type="submit" (click)="getData()">Search</button>
   </form>
 </nav>
 <div class="container-fluid categ">

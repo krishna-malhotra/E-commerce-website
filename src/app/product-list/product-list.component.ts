@@ -3,6 +3,7 @@ import {ProdServiceService} from '../prod-service.service'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { CartService } from '../cart.service';
 import { RegisterService } from '../register.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-product-list',
@@ -15,6 +16,8 @@ export class ProductListComponent implements OnInit {
   private url;
   private categ;
   private user:any;
+  private role:string;
+  private k:any;
   constructor(private _http: ProdServiceService, private route : ActivatedRoute, private router: Router,private cartS: CartService, private regS:RegisterService) { }
   
   ngOnInit() {
@@ -31,6 +34,10 @@ export class ProductListComponent implements OnInit {
    })
    this.regS.getUser().subscribe(data=>{
      this.user = data;
+   })
+   this.regS.getUser().subscribe(data=>{
+     this.k= data;
+     this.role = this.k.role;
    })
   }
 
