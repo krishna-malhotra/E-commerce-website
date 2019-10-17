@@ -45,7 +45,7 @@
               <button class="btn btn-outline-warning mr-5 " (click)="viewProd(prod)">Buy Now</button>
               <button class="btn btn-outline-warning" (click)="addProd(prod.productId)">Add To Cart</button>
           </div>
-          <button class="btn btn-outline-warning btn-block mt-1"  (click)="edit(prod)" *ngIf="role=='Admin' && loginService.isUserLoggedIn()">Edit Product</button>
+          <button class="btn btn-outline-warning btn-block mt-1"  (click)="edit(prod)" *ngIf="loginService.isUserLoggedIn() && role=='Admin'" >Edit Product</button>
         </div>
       </div>
 </div>

@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
   private user:any;
   private role:string;
   private k:any;
-  constructor(private _http: ProdServiceService, private route : ActivatedRoute, private router: Router,private cartS: CartService, private regS:RegisterService) { }
+  constructor(private _http: ProdServiceService, private route : ActivatedRoute, private router: Router,private cartS: CartService, private regS:RegisterService,private loginService:AuthenticationService) { }
   
   ngOnInit() {
    this.route.paramMap.subscribe( (params: ParamMap) => {
@@ -26,7 +26,9 @@ export class ProductListComponent implements OnInit {
       this.categ = cat;
       if(this.categ === 'all')
       {
-        this._http.getProducts().subscribe(data => { this.products = data});
+        this._http.getProducts().subscribe(data => { 
+          console.log(data);
+          this.products = data});
       }
       else{
         this._http.getProductsByCategory(this.categ).subscribe(data => { this.products = data});
@@ -34,10 +36,12 @@ export class ProductListComponent implements OnInit {
    })
    this.regS.getUser().subscribe(data=>{
      this.user = data;
+
    })
    this.regS.getUser().subscribe(data=>{
      this.k= data;
      this.role = this.k.role;
+     
    })
   }
 
@@ -74,8 +78,16 @@ export class ProductListComponent implements OnInit {
   }
   addProd(prodId)
   {
-    this.cartS.addProduct(prodId).subscribe((data) => console.log(data));
-    alert("Product has been added to your cart");
+    if(this.loginService.isUserLoggedIn()){
+
+      this.cartS.addProduct(prodId).subscribe((data) => console.log(data));
+      alert("Product has been added to your cart");
+    }
+    else{
+      alert("Please log in to add product in your cart");
+    }
+
+  
   }
   edit(product)
   {

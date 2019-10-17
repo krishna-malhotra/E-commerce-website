@@ -34,7 +34,7 @@ export class EditproductComponent implements OnInit {
   editPr(){
     this.prodS.editProd(this.product).subscribe(data=>{
       this.product = data;
-      this.router.navigate(['editProducrC',this.prodId]);
+      this.router.navigate(['editProductC',this.prodId]);
     })
   }
 }
