@@ -10,6 +10,7 @@ import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { EditproductComponent } from './editproduct/editproduct.component';
+import { AuthguardService } from './authguard.service';
 
 
 export const MAIN_ROUTES: Routes = [
@@ -25,6 +26,7 @@ export const MAIN_ROUTES: Routes = [
       {
         path: "cart",
         component: UserCartComponent,
+        canActivate:[AuthguardService]
       },
       {
         path: "login",
@@ -44,23 +46,28 @@ export const MAIN_ROUTES: Routes = [
       },
       {
         path:"logout",
-        component:LogoutComponent
+        component:LogoutComponent,
+        canActivate:[AuthguardService]
       },
       {
         path:"checkOut",
-        component:OrderhistoryComponent
+        component:OrderhistoryComponent,
+        canActivate:[AuthguardService]
       },
       {
         path:"profile",
-        component:UserProfileComponent
+        component:UserProfileComponent,
+        canActivate:[AuthguardService]
       },
       {
         path:"addProduct",
-        component:AddproductComponent
+        component:AddproductComponent,
+        canActivate:[AuthguardService]
       },
       {
         path:"editProductC/:id",
-        component:EditproductComponent
+        component:EditproductComponent,
+        canActivate:[AuthguardService]
       }
 
 ]
